@@ -1,30 +1,42 @@
-const data = {
-  tasks: {
-    one: {
-      id: "one",
-      content: "Hello"
+const data = function() {
+  return {
+    tasks: {
+      one: {
+        id: "one",
+        content: "Hello"
+      },
+      two: {
+        id: "two",
+        content: "World"
+      },
+      three: {
+        id: "three",
+        content: "My Name"
+      },
+      four: {
+        id: "four",
+        content: "is Eric"
+      }
     },
-    two: {
-      id: "two",
-      content: "World"
+    columns: {
+      one: {
+        id: "one",
+        title: "Not Started",
+        taskIds: ["one", "two", "three", "four"]
+      },
+      two: {
+        id: "two",
+        title: "In Progress",
+        taskIds: []
+      },
+      three: {
+        id: "three",
+        title: "Done",
+        taskIds: []
+      }
     },
-    three: {
-      id: "three",
-      content: "My Name"
-    },
-    four: {
-      id: "four",
-      content: "is Eric"
-    }
-  },
-  columns: {
-    one: {
-      id: "one",
-      title: "Not Started",
-      taskIds: ["one", "two", "three", "four"]
-    }
-  },
-  columnOrder: ["one"]
+    columnOrder: ["one", "two", "three"]
+  };
 };
 
 export default data;
